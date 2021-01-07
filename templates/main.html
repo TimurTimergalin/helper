@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="helper" style="position: fixed;right: 10px">
+    <img id="avatar" src="" alt="" style="max-height: 200px;max-width: 200px">
+    <div style="float: left">
+        <div id="text" style="max-width: 300px">
+
+        </div>
+        <div id="options">
+
+        </div>
+    </div>
+</div>
+<script>
+    function loadJSON(callback) {
+
+        var xobj = new XMLHttpRequest();
+        xobj.overrideMimeType("application/json");
+        xobj.open('GET', '../static/json/replicas.json', true);
+        xobj.onreadystatechange = function () {
+            if (xobj.readyState == 4 && xobj.status == "200") {
+                // .open will NOT return a value but simply returns undefined in async mode so use a callback
+                callback(xobj.responseText);
+
+            }
+        }
+        xobj.send(null);
+
+    }
+
+    function randomChoice(arr) {
+        let len = arr.length;
+        let rand = Math.floor(Math.random() * len)
+        return arr[rand]
+    }
+
+
+    function load_replica(user, replica_name) {
+        loadJSON(function (response) {
+            let realJSON = JSON.parse(response);
+            console.log(realJSON);
+            let replica = realJSON[user][replica_name];
+            let avatar = document.getElementById('avatar');
+            let text = document.getElementById('text');
+            let options = document.getElementById('options');
+            avatar.src = randomChoice(replica['avatar']);
+            text.innerHTML = '';
+            options.innerHTML = '';
+            let text_p = document.createElement('p');
+            text_p.innerHTML = replica['text'];
+            text.appendChild(text_p);
+            for (let i = 0; i < replica['options'].length; i++) {
+                let link = document.createElement('a');
+                link.innerHTML = replica['options'][i]['text'];
+                link.onclick = function () {
+                    load_replica(user, replica['options'][i]['link'])
+                };
+                link.style.color = '#0099AA'
+                options.appendChild(link);
+                options.appendChild(document.createElement('br'))
+            }
+            if (replica_name !== 'greet' && replica_name !== 'sections'){
+            let link = document.createElement('a');
+            link.innerHTML = 'Назад'
+            link.style.color = '#0099AA'
+            link.onclick = function () {
+                load_replica(user, 'sections')
+            }
+            options.appendChild(link)}
+
+        })
+    }
+
+    load_replica("{{ user }}", "greet")
+
+</script>
+</body>
+</html>

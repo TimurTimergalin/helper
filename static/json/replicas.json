@@ -1,0 +1,201 @@
+{
+  "librarian": {
+    "greet": {
+      "text": "Привет! Меня зовут Либби, я здесь, чтобы помочь тебе разобраться в своём сайте. Если у тебя будут ко мне вопросы - обращайся.",
+      "avatar": [
+        "static/img/helper6.png",
+        "static/img/helper7.png"
+      ],
+      "options": [
+        {
+          "text": "У меня есть к тебе вопрос",
+          "link": "sections"
+        }
+      ]
+    },
+    "sections": {
+      "text": "О чем ты хочешь меня спросить?",
+      "avatar": [
+        "static/img/helper1.png",
+        "static/img/helper6.png",
+        "static/img/helper7.png"
+      ],
+      "options": [
+        {
+          "text": "Как начать работу с libby.ru",
+          "link": "section1"
+        },
+        {
+          "text": "О работе библиотеки",
+          "link": "section2"
+        }
+      ]
+    },
+    "section1": {
+      "text": "Что именно тебя интересует?",
+      "avatar": [
+        "static/img/helper1.png",
+        "static/img/helper6.png",
+        "static/img/helper7.png"
+      ],
+      "options": [
+        {
+          "text": "Что такое \"Ученики\", \"Издания\" и \"Книги\"?",
+          "link": "section1q1"
+        },
+        {
+          "text": "Что мне следует сделать в первую очередь?",
+          "link": "section1q2"
+        },
+        {
+          "text": "Как мне добавить новую книгу в базу библиотеки?",
+          "link": "section1q3"
+        },
+        {
+          "text": "Как выдать книгу ученику из забрать её обратно?",
+          "link": "section1q4"
+        },
+        {
+          "text": "Как удалить книгу из базы библиотеки?",
+          "link": "section1q5"
+        }
+      ]
+    },
+    "section1q1": {
+      "text": "\"Ученики\", \"Издания\" и \"Книги\" - инструменты, с помощью которых вы сможете эффективно управлять школьной библиотекой.",
+      "avatar": [
+        "static/img/helper1.png",
+        "static/img/helper3.png",
+        "static/img/helper4.png",
+        "static/img/helper5.png"
+      ],
+      "options": [
+        {
+          "text": "Далее",
+          "link": "section1q1ad1"
+        }
+      ]
+    },
+    "section1q1ad1": {
+      "text": "Во вкладке \"Ученики\" находится список всех учеников, привязанных к вашей библиотеке. Здесь вы можете посмотреть подробную информацию о каждом ученике и узнать, какие книги находятся в его пользовании.",
+      "avatar": [
+        "static/img/helper1.png",
+        "static/img/helper3.png",
+        "static/img/helper4.png",
+        "static/img/helper5.png"
+      ],
+      "options": [
+        {
+          "text": "Далее",
+          "link": "section1q1ad2"
+        }
+      ]
+    },
+    "section1q1ad2": {
+      "text": "Во вкладке \"Издания\" находится список всех <b>различных</b> книг в вашей библиотеке. Здесь вы можете узнать информацию о каждой книге: название, фамилию автора, издательство, год выпуска.",
+      "avatar": [
+        "static/img/helper1.png",
+        "static/img/helper3.png",
+        "static/img/helper4.png",
+        "static/img/helper5.png"
+      ],
+      "options": [
+        {
+          "text": "Далее",
+          "link": "section1q1ad3"
+        }
+      ]
+    },
+    "section1q1ad3": {
+      "text": "Во вкладке \"Книги\" находится список всех книг в вашей библиотеке. Здесь вы можете узнать, где находится каждая конкретная книга.",
+      "avatar": [
+        "static/img/helper1.png",
+        "static/img/helper3.png",
+        "static/img/helper4.png",
+        "static/img/helper5.png"
+      ],
+      "options": []
+    },
+    "section1q2": {
+      "text": "В первую очередь, вам стоит занести информацию о всех книгах в базу библиотеки и приклеить на каждую книгу qr-коды.",
+      "avatar": [
+        "static/img/helper1.png",
+        "static/img/helper3.png",
+        "static/img/helper4.png",
+        "static/img/helper5.png"
+      ],
+      "options": []
+    },
+    "section1q3": {
+      "text": "Если в вашей библиотеке есть такая же книга, что и новая, вам следует найти нужное издание и добавить к нему книгу.",
+      "avatar": [
+        "static/img/helper1.png",
+        "static/img/helper3.png",
+        "static/img/helper4.png",
+        "static/img/helper5.png"
+      ],
+      "options": [
+        {
+          "text": "Далее",
+          "link": "section1q3ad1"
+        }
+      ]
+    },
+    "section1q3ad1": {
+      "text": "Для этого перейдите во вкладку \"Издания\", найдите нужное издание с помощью фильтров поиска, кликните по его названию и нажмите \"Добавить книгу к изданию\"",
+      "avatar": [
+        "static/img/helper1.png",
+        "static/img/helper3.png",
+        "static/img/helper4.png",
+        "static/img/helper5.png"
+      ],
+      "options": [
+        {
+          "text": "Далее",
+          "link": "section1q3ad2"
+        }
+      ]
+    },
+    "section1q3ad2": {
+      "text": "Теперь вам нужно наклеить на новую книгу qr-код. Для этого пролистайте список книг издания вниз. Новая книга будет в конце списка. Нажмите на id этой книги, скачайте qr-код с открывшейся страницы, распечатайте его и приклейте к книге.",
+      "avatar": [
+        "static/img/helper1.png",
+        "static/img/helper3.png",
+        "static/img/helper4.png",
+        "static/img/helper5.png"
+      ],
+      "options": [
+        {
+          "text": "Далее",
+          "link": "section1q3ad3"
+        }
+      ]
+    },
+    "section1q3ad3": {
+      "text": "Если в библиотеке нет такой же книги, вам следует создать новое издание. Для этого перейдите во вкладку \"Издания\", нажмите \"Добавить издание\", внесите информацию о книге, в графе \"Количество книг\" внесите число новых книг.",
+      "avatar": [
+        "static/img/helper1.png",
+        "static/img/helper3.png",
+        "static/img/helper4.png",
+        "static/img/helper5.png"
+      ],
+      "options": [
+        {
+          "text": "Далее",
+          "link": "section1q3ad4"
+        }
+      ]
+
+    },
+    "section1q3ad4": {
+      "text": "Теперь к новым книгам нужно приклеить qr-коды. Для этого пролистайте список книг издания вниз. Там вы найдете листы с qr-кодами. Скачайте и распечатайте из, разрежьте и приклейте к каждой книге",
+      "avatar": [
+        "static/img/helper1.png",
+        "static/img/helper3.png",
+        "static/img/helper4.png",
+        "static/img/helper5.png"
+      ],
+      "options": []
+    }
+  }
+}
